@@ -1582,7 +1582,7 @@ namespace Cloudinary {
                 throw new \InvalidArgumentException("Must supply api_secret");
             }
 
-            $api_url = implode("/", array_merge(array($prefix, "v1_1", $cloud_name), array_map('rawurlencode', $uri)));
+            $api_url = implode("/", array_merge(array($prefix, "v1_1", $cloud_name), $uri));
 
             $params = array_filter(
                 $params,
